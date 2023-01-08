@@ -2,9 +2,8 @@ package com.ufr.umontpellier.hai913i.tp5.service;
 import com.ufr.umontpellier.hai913i.tp5.model.User;
 import com.ufr.umontpellier.hai913i.tp5.utils.Utils;
 import java.util.Scanner;
-import java.util.logging.Logger;
+
 public class UserService {
-    private static Logger LOGGER = Logger.getLogger(UserService.class.getName());
 
     static Scanner sc = new Scanner(System.in);
 
@@ -13,9 +12,8 @@ public class UserService {
     public static User getUser() {
         return user;
     }
-
+ 
     public static void setUser(User user) {
-        LOGGER.info("MethodeName : setUser"+";"+UserService.getUser().toString()+ ";" +user.toString());
         UserService.user = user;
     }
 

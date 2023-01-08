@@ -6,12 +6,10 @@ import com.ufr.umontpellier.hai913i.tp5.service.ProductService;
 import com.ufr.umontpellier.hai913i.tp5.service.UserService;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Application {
-    private static Logger LOGGER = Logger.getLogger(Application.class.getName());
 
     static Scanner sc = new Scanner(System.in);
 
@@ -23,6 +21,7 @@ public class Application {
         initSession();
         sc = new Scanner(System.in);
         String input = "";
+
         do {
             System.out.println("********************");
             System.out.println("choose 1 to display all products");
@@ -56,7 +55,7 @@ public class Application {
                             Product p = ProductService.getProductById(id);
                             System.out.println(p);
                         } catch (ProductNotFoundException e) {
-                            System.out.println(e.getMessage());
+                        	System.out.println(e.getMessage());
                         }
                         break;
                     }
@@ -119,13 +118,12 @@ public class Application {
                     }
                 default :
                     System.err.println("menu input not in the list, please try other value");
+                    
             }
         } while (!input.equals("0") );
         sc.close();
     }
-
     private static void initSession() {
-        LOGGER.info("MethodeName : initSession"+";"+UserService.getUser().toString()+ ";" +"no parameters given");
         System.out.println("Create a new account : ");
         UserService.createUser();
         System.out.println("Account Created.");
