@@ -1,0 +1,9 @@
+com\ufr\umontpellier\hai913i\tp5\exceptions\ProductException.class
+com\ufr\umontpellier\hai913i\tp5\exceptions\ProductNotFoundException.class
+com\ufr\umontpellier\hai913i\tp5\utils\Utils.class
+com\ufr\umontpellier\hai913i\tp5\exceptions\ProductAlreadyExisteException.class
+com\ufr\umontpellier\hai913i\tp5\service\UserService.class
+com\ufr\umontpellier\hai913i\tp5\Application.class
+com\ufr\umontpellier\hai913i\tp5\service\ProductService.class
+com\ufr\umontpellier\hai913i\tp5\model\User.class
+com\ufr\umontpellier\hai913i\tp5\model\Product.class
